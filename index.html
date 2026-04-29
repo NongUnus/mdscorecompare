@@ -82,6 +82,45 @@
     font-weight: 300;
   }
 
+  .note-box {
+    margin: 18px auto 0;
+    max-width: 920px;
+    text-align: left;
+    background: rgba(6,182,212,0.08);
+    border: 1px solid rgba(6,182,212,0.25);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 13px;
+    line-height: 1.55;
+    color: #cfd7e6;
+  }
+
+  .note-box b {
+    color: var(--accent-68);
+    font-weight: 700;
+  }
+
+  .bottom-notes {
+    margin-top: 28px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(107,107,128,0.35);
+    background: rgba(107,107,128,0.08);
+    color: #cfd7e6;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .bottom-notes b {
+    color: #b8c0d4;
+    font-weight: 700;
+    margin-right: 6px;
+  }
+
+  .bottom-notes p + p {
+    margin-top: 6px;
+  }
+
   /* Legend & stats */
   .top-stats {
     display: grid;
@@ -509,6 +548,9 @@
     <div class="badge">COTMES ADMISSION DATA — MD ONLY</div>
     <h1>กสพท. <span class="y66">'66</span> vs <span class="y68">'68</span></h1>
     <p class="subtitle">คะแนนต่ำสุด (MIN) คณะแพทยศาสตร์ • เปรียบเทียบ 2 ปี</p>
+    <div class="note-box">
+      <b>หมายเหตุ:</b> ไม่นำสถิติปี 2567 มาคำนวณ เนื่องจาก กสพท. มีมติยกเลิกคะแนน TPAT1 ฉบับที่ 1 (เชาวน์ปัญญา) ออกทั้งส่วน (10%) หลังพบข้อสอบซ้ำซ้อนกับ BMAT เพื่อรักษามาตรฐานความเที่ยงธรรม ระบบจึงเลือกใช้เฉพาะปีที่มีเกณฑ์การคิดคะแนนปกติ
+    </div>
   </header>
 
   <div class="top-stats" id="topStats"></div>
@@ -558,6 +600,11 @@
     <div class="section-title">// FEAR INDEX — คะแนนพุ่งสูงสุด</div>
     <div class="fear-grid" id="fearGrid"></div>
   </div>
+
+  <div class="bottom-notes">
+    <p><b>หมายเหตุ:</b> คณะแพทย์ ม.เกษตรศาสตร์ เปิดรุ่นแรกใน TCAS67</p>
+    <p><b>หมายเหตุ:</b> คณะแพทยศาสตร์ศรีสวางควัฒน ราชวิทยาลัยจุฬาภรณ์ ไม่เข้ารอบ กสพท. ปี 66</p>
+  </div>
 </div>
 
 <div class="tooltip" id="tooltip"></div>
@@ -586,7 +633,7 @@ const raw = [
   { name: "ม.แม่ฟ้าหลวง", short: "แม่ฟ้าหลวง", s66: 61.1045, s68: 65.3364, private: false },
   { name: "ม.สยาม (เอกชน)", short: "สยาม", s66: 55.1729, s68: 53.0338, private: true },
   { name: "ม.เวสเทิร์น (เอกชน)", short: "เวสเทิร์น", s66: 51.0347, s68: 52.0848, private: true },
-  { name: "ม.ศรีสวางควัฒน (จุฬาภรณ์)", short: "จุฬาภรณ์", s66: null, s68: 69.4887, private: false },
+  { name: "ว.ศรีสวางควัฒน (จุฬาภรณ์)", short: "จุฬาภรณ์", s66: null, s68: 69.4887, private: false },
   { name: "ม.เกษตรศาสตร์ ", short: "เกษตร", s66: null, s68: 67.1090, private: false },
 ];
 
